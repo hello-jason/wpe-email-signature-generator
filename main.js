@@ -161,7 +161,7 @@ output_address_horizontal();
 //
 // WP Engine logo
 function output_wpengine_logo() {
-  var wpe_logo_html = "<td border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><br><img src=\"https://wpengine.com/wp-content/uploads/2016/06/WP-LOGO-EmailSignature-White.png\" width=\"126\" height=\"24\"></td>";
+  var wpe_logo_html = "<td border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><br><img src=\"https://wpengine.com/wp-content/uploads/2016/08/WP-LOGO-EmailSignature.gif\" width=\"126\" height=\"24\"></td>";
   // Logo is visible in initial state
   $(".logo_element").show();
   $(".logo_element").html(wpe_logo_html);
