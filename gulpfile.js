@@ -40,11 +40,19 @@ gulp.task('copy-html', function() {
 });
 
 //
-// CXopy javascript
+// Copy javascript
 //
 gulp.task('copy-js', function() {
   gulp.src('./src/javascript/main.js')
     .pipe(gulp.dest('./dist/js'));
+});
+
+//
+// Copy images
+//
+gulp.task('copy-images', function() {
+  gulp.src('./src/images/**/*.*')
+    .pipe(gulp.dest('./dist/images'));
 });
 
 //
@@ -91,7 +99,7 @@ gulp.task('copyfonts', function() {
 // Master build task
 // Compilies stylesheets for production
 gulp.task('build', function() {
-  runSequence('clean:dist', 'copy-html', 'copy-js', 'sass','autoprefixer', 'minify', 'gzip', 'copyfonts');
+  runSequence('clean:dist', 'copy-html', 'copy-images', 'copy-js', 'sass','autoprefixer', 'minify', 'gzip', 'copyfonts');
 });
 
 //
@@ -101,7 +109,7 @@ gulp.task('build', function() {
 //
 gulp.task('watch', function() {
   gulp.start('connect');
-  watch('./src/scss/**/*.scss', function() {
+  watch('./src/**/*.*', function() {
     gulp.start('build');
   });
 });

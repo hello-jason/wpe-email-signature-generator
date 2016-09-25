@@ -3752,7 +3752,7 @@ pre {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .hero .textbox .icon, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .hero .textbox, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .hero .textbox .title, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -4021,11 +4021,11 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .hero .textbox .icon, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .hero .textbox, .col-md-8, .col-md-9, .col-md-10, .hero .textbox .title, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
-  .col-md-2 {
+  .col-md-2, .hero .textbox .icon {
     width: 16.66667%; }
   .col-md-3 {
     width: 25%; }
@@ -4035,13 +4035,13 @@ pre {
     width: 41.66667%; }
   .col-md-6 {
     width: 50%; }
-  .col-md-7 {
+  .col-md-7, .hero .textbox {
     width: 58.33333%; }
   .col-md-8 {
     width: 66.66667%; }
   .col-md-9 {
     width: 75%; }
-  .col-md-10 {
+  .col-md-10, .hero .textbox .title {
     width: 83.33333%; }
   .col-md-11 {
     width: 91.66667%; }
@@ -8316,3 +8316,52 @@ a:focus {
 
 #instructions li {
   margin-bottom: 1em; }
+
+.hero {
+  background: url(../images/WP-EMAIL-HeroBackground-v01.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  min-height: 565px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .hero .logo {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    padding: 30px 15px 15px;
+    background: #162A33; }
+  .hero .textbox {
+    border: 2px solid #fff;
+    color: #fff; }
+    .hero .textbox .box {
+      padding: 15px; }
+    .hero .textbox .icon {
+      border-right: 2px solid #fff; }
+    .hero .textbox .title {
+      padding: 28px; }
+      .hero .textbox .title h1 {
+        padding: 0;
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold; }
+    .hero .textbox .content {
+      border-top: 2px solid #fff;
+      padding: 30px; }
+      .hero .textbox .content p {
+        margin: 0;
+        padding: 0;
+        font-size: 56px;
+        line-height: 1.25em;
+        font-family: "DINNextLTW01-UltraLight 706122", "Open Sans", sans-serif;
+        font-weight: bold; }
+      .hero .textbox .content em {
+        border-bottom: 2px solid #fff;
+        display: inline-block; }
+
+main {
+  background: #EBEEF1; }
