@@ -30,16 +30,42 @@
 a:focus {
   outline: none !important;
 }
+.required {
+  color: $brand-danger;
+}
+hr {
+  border-top-color: $color-bluescale-4;
+  margin-top: $padding-md;
+  margin-bottom: $padding-md;
+}
+
+.btn {
+  padding: $padding-xs;
+  text-transform: none;
+  font-size: $font-size-small;
+  margin: 0;
+  border: 1px solid $table-border-color;
+  font-family: $font-family-base;
+  box-shadow: none;
+  &.active {
+    box-shadow: none;
+  }
+  &:hover, &:active, &.active {
+    color: $text-color;
+    background: #dfdfdf;
+  }
+}
+
 #instructions {
   background: #f5f5f5;
   padding: 15px;
   border: 1px solid #31708f;
-}
-#instructions img {
-  border: 1px solid #dfdfdf;
-}
-#instructions li {
+  img {
+    border: 1px solid #dfdfdf;
+  }
+  li {
   margin-bottom: 1em;
+  }
 }
 
 .hero {
@@ -59,7 +85,7 @@ a:focus {
     background: $brand-default;
   }
   .textbox {
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     color: #fff;
     @extend .col-md-7;
     .box {
@@ -67,11 +93,11 @@ a:focus {
     }
     .icon {
       @extend .col-md-2;
-      border-right: 2px solid #fff;
+      border-right: 3px solid #fff;
     }
     .title {
       @extend .col-md-10;
-      padding: $padding-md - 2px;
+      padding: $padding-md - 3px;
       h1 {
         padding: 0;
         margin: 0;
@@ -80,8 +106,9 @@ a:focus {
       }
     }
     .content {
-      border-top: 2px solid #fff;
+      border-top: 3px solid #fff;
       padding: $padding-md;
+      position: relative;
       p {
         margin: 0;
         padding: 0;
@@ -89,6 +116,13 @@ a:focus {
         line-height: 1.25em;
         font-family: $headings-font-family;
         font-weight: bold;
+      }
+      .fa {
+        position: absolute;
+        left: $padding-sm;
+        bottom: $padding-sm;
+        transform: rotate(45deg);
+        font-size: $font-size-h1;
       }
       em {
         border-bottom: 2px solid #fff;
@@ -100,4 +134,40 @@ a:focus {
 
 main {
   background: $color-bluescale-1;
+  clear: both;
+  overflow: hidden;
+}
+
+#signature-output {
+  background: $color-bluescale-2;
+  padding: $padding-lg;
+  margin-top: $padding-lg;
+  .tab-pane, .well {
+    background: #fff;
+  }
+  // Don't show underline transition on active tab
+  .nav-tabs {
+    li.active {
+      &>a:link {
+        &, &:active, &:focus, &:hover {
+          &::before {
+            transition: none;
+            background: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  .option {
+    color: $color-pelorous;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-size-small;
+    margin: 0;
+    padding: 0;
+  }
+  .signature-title {
+    margin: 0 0 $padding-sm;
+    padding: 0;
+  }
 }

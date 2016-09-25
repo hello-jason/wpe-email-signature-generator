@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>WP Engine Email Signature</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
 
@@ -23,103 +22,113 @@
     </div> <!-- /row -->
     <div class="row content">
       <div class="box">
-        <p>Let's set up your email signature in <em>3</em> simple steps</p>
+        <p>Let's set up your WP Engine email signature in <em>3</em> simple steps</p>
+        <i class="fa fa-arrow-down"></i>
       </div>
     </div> <!-- /row -->
   </div> <!-- /textbox -->
 </div> <!-- /hero -->
 
 <main class="main">
-  <div class="row">
   <div class="col-md-6">
-    <h2>Employee Information</h2>
-    <p>Fill out this form with your information to generate a custom WP Engine email signature.</p>
-    <hr>
-    <button id="reset-form" type="button" class="btn btn-default btn-xs">Reset Form</button>
-    <hr>
     <form id="employee-information-form">
       <fieldset>
-        <div class="input_full_name form-group">
-          <label>Full name</label>
-          <input class="form-control" type="text" name="full_name" placeholder="Louis Armstrong">
-        </div>
-        <div class="input_position form-group">
-          <label>Position at WP Engine</label>
-          <input class="form-control" type="text" name="position" placeholder="Dapper Trumpeter">
-        </div>
-        <div class="input_email_address form-group">
-          <label>Email address</label>
-          <input class="form-control" type="text" name="email_address" placeholder="louis.armstrong@wpengine.com">
-        </div>
-        <div class="input_phone_office form-group">
-          <label>Office phone number</label>
-          <input class="form-control" type="tel" name="phone_office" placeholder="555-555-5555">
-          <span class="help-block">Use <mark>hyphens</mark> for your separator. Example: 555-867-5309</span>
-        </div>
-        <div class="input_phone_mobile form-group">
-          <label>Mobile phone number</label>
-          <input class="form-control" type="tel" name="phone_mobile" placeholder="555-555-5555">
-          <span class="help-block">Use <mark>hyphens</mark> for your separator. Example: 555-867-5309</span>
-        </div>
-        <div class="input_twitter_username form-group">
-          <label>Twitter username</label>
-          <div class="input-group">
-            <span class="input-group-addon">@</span>
-            <input class="form-control" type="text" name="twitter_username" placeholder="username">
+        <button id="reset-form" type="button" class="btn btn-xs">Reset Form</button>
+        <hr>
+        <div class="col-md-6">
+          <div class="input_full_name form-group">
+            <label>Full name</label>
+            <input class="form-control" type="text" name="full_name" placeholder="Louis Armstrong">
+          </div>
+          <div class="input_position form-group">
+            <label>Position at WP Engine</label>
+            <input class="form-control" type="text" name="position" placeholder="Dapper Trumpeter">
           </div>
         </div>
-        <div class="input_office form-group">
-          <label>Office location</label><br>
-          <div id="choose-office" class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="radio" name="location" id="location_austin" autocomplete="off" checked> Austin
-            </label>
-            <label class="btn btn-default">
-              <input type="radio" name="location" id="location_san_antonio" autocomplete="off"> San Antonio
-            </label>
-            <label class="btn btn-default">
-              <input type="radio" name="location" id="location_san_francisco" autocomplete="off"> San Francisco
-            </label>
-            <label class="btn btn-default">
-              <input type="radio" name="location" id="location_london" autocomplete="off"> London
-            </label>
-          </div> <!-- /btn-group -->
-        </div>
-        <div class="input_promotion form-group">
-          <label>Promotional line</label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="promotion" id="promotion-0">
-              No promotion line
-            </label>
+        <div class="col-md-6">
+          <div class="input_email_address form-group">
+            <label>Email address</label>
+            <input class="form-control" type="text" name="email_address" placeholder="louis.armstrong@wpengine.com">
           </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="promotion" id="promotion-2" checked>
-              Voted #1 Top Workplace of Greater Austin
-            </label>
+          <div class="input_twitter_username form-group">
+            <label>Twitter username</label>
+            <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input class="form-control" type="text" name="twitter_username" placeholder="username">
+            </div>
           </div>
         </div>
-        <div class="input_logo form-group">
-          <label>WP Engine logo</label><br>
-          <div id="choose-logo" class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="radio" name="logo" id="logo_show" autocomplete="off" checked> Show logo
-            </label>
-            <label class="btn btn-default">
-              <input type="radio" name="logo" id="logo_hide" autocomplete="off"> Hide logo
-            </label>
+        <div class="col-md-6">
+          <div class="input_phone_office form-group">
+            <label>Office phone number</label>
+            <input class="form-control" type="tel" name="phone_office" placeholder="555-555-5555">
+            <span class="help-block">Use <mark>hyphens</mark> for your separator. Example: 555-867-5309</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input_phone_mobile form-group">
+            <label>Mobile phone number</label>
+            <input class="form-control" type="tel" name="phone_mobile" placeholder="555-555-5555">
+            <span class="help-block">Use <mark>hyphens</mark> for your separator. Example: 555-867-5309</span>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="input_office form-group">
+            <label>Office location</label><br>
+            <div id="choose-office" class="btn-group" data-toggle="buttons">
+              <label class="btn active">
+                <input type="radio" name="location" id="location_austin" autocomplete="off" checked> Austin
+              </label>
+              <label class="btn">
+                <input type="radio" name="location" id="location_san_antonio" autocomplete="off"> San Antonio
+              </label>
+              <label class="btn">
+                <input type="radio" name="location" id="location_san_francisco" autocomplete="off"> San Francisco
+              </label>
+              <label class="btn">
+                <input type="radio" name="location" id="location_london" autocomplete="off"> London
+              </label>
+            </div> <!-- /btn-group -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input_logo form-group">
+            <label>WP Engine logo</label><br>
+            <div id="choose-logo" class="btn-group" data-toggle="buttons">
+              <label class="btn active">
+                <input type="radio" name="logo" id="logo_show" autocomplete="off" checked> Show logo
+              </label>
+              <label class="btn">
+                <input type="radio" name="logo" id="logo_hide" autocomplete="off"> Hide logo
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input_promotion form-group">
+            <label>Promotional line</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="promotion" id="promotion-0">
+                No promotion line
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="promotion" id="promotion-2" checked>
+                Voted #1 Top Workplace of Greater Austin
+              </label>
+            </div>
           </div>
         </div>
       </fieldset>
     </form>
   </div>
-  <div id="signature-output" class="col-md-6">
-    <h2>Generated Signatures</h2>
-    <p>Copy the signature you want to use and paste into your email program.</p>
-    <hr>
+  <div id="signature-output" class="col-md-5 col-md-offset-1">
+    <p>These signatures will udpate as you type into the fields on the left.</p>
 
-    <h3>1) HTML Full</h3>
+    <p class="option">Option 1</p>
+    <h3 class="signature-title">Full Signature</h3>
     <ul id="html-signature-full-tabs" class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a role="tab" href="#signature-full-visual">Visual</a></li>
       <li role="presentation"><a role="tab" href="#signature-full-html">HTML</a></li>
@@ -195,7 +204,8 @@
     </div> <!-- /tab-content -->
 
     <hr>
-    <h3>2) HTML Horizontal</h3>
+    <p class="option">Option 2</p>
+    <h3 class="signature-title">Horizontal Signature</h3>
     <ul id="html-signature-horizontal-tabs" class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a role="tab" href="#signature-horizontal-visual">Visual</a></li>
       <li role="presentation"><a role="tab" href="#signature-horizontal-html">HTML</a></li>
@@ -255,7 +265,8 @@
     </div><!-- /tab-content -->
 
     <hr>
-    <h3>3) Plaintext</h3>
+    <p class="option">Option 3</p>
+    <h3 class="signature-title">Plaintext Signature</h3>
     <div id="plaintext-signature" class="well">
       <strong><span class="output_full_name"></span></strong>, <span class="output_position"></span><br>
       <span class="output_email_address"></span><br>
@@ -275,9 +286,10 @@
       </span>
     </div>
   </div> <!-- /signature-output -->
-  </div> <!-- /row -->
 </main>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
