@@ -39,23 +39,21 @@
       <div class="content">
         <form id="employee-information-form">
         <fieldset>
-          <button id="reset-form" type="button" class="btn btn-xs">Reset Form</button>
-          <hr>
           <div class="col-md-6">
             <div class="input_full_name form-group">
-              <label>Full name</label>
+              <label>Full name<span class="required">*</span></label>
               <input class="form-control" type="text" name="full_name" placeholder="Louis Armstrong">
             </div>
           </div>
           <div class="col-md-6">
             <div class="input_position form-group">
-              <label>Position at WP Engine</label>
+              <label>Position at WP Engine<span class="required">*</span></label>
               <input class="form-control" type="text" name="position" placeholder="Dapper Trumpeter">
             </div>
           </div>
           <div class="col-md-6">
             <div class="input_email_address form-group">
-              <label>Email address</label>
+              <label>Email address<span class="required">*</span></label>
               <input class="form-control" type="text" name="email_address" placeholder="louis.armstrong@wpengine.com">
             </div>
           </div>
@@ -84,7 +82,7 @@
           </div>
           <div class="col-sm-12">
             <div class="input_office form-group">
-              <label>Office location</label><br>
+              <label>Office location<span class="required">*</span></label><br>
               <div id="choose-office" class="btn-group" data-toggle="buttons">
                 <label class="btn active">
                   <input type="radio" name="location" id="location_austin" autocomplete="off" checked> Austin
@@ -133,6 +131,9 @@
           </div>
         </fieldset>
         </form>
+        <hr>
+        <button id="reset-form" type="button" class="btn btn-xs">Reset Form</button>
+        <a class="btn btn-xs visible-sm visible-xs" href="#signature-output">Get signature</a>
       </div>
     </div> <!-- /step-1 -->
 
@@ -153,19 +154,17 @@
         <p>Paste the signature into your email program</p>
       </div> <!-- /titlebar -->
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Choose a program below </p>
+        <button id="paste-gmail" type="button" class="btn btn-xs">Gmail</button>
+        <button id="paste-outlook" type="button" class="btn btn-xs">Outlook</button>
+        <img class="img-responsive" src="images/WP-GIF-PasteGmail-v01.gif">
       </div>
     </div> <!-- /step-2 -->
   </div> <!-- /col-md-6 -->
 
 
   <div id="signature-output" class="col-md-5 col-md-offset-1">
-    <p>These signatures will udpate as you type into the fields on the left.</p>
+    <p>These signatures will update as you type into the fields on the left.</p>
 
     <p class="option">Option 1</p>
     <h3 class="signature-title">Full Signature</h3>
