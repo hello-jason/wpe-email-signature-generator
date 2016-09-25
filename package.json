@@ -1,0 +1,31 @@
+{
+  "name": "wpe-email-signature-generator",
+  "version": "1.0.0",
+  "description": "URL: http://wpeng.in/signature",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jump-start": "^0.0.7",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-gzip": "^1.4.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-watch": "^4.3.9",
+    "gulp-rm": "^1.0.1",
+    "run-sequence ": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hello-jason/wpe-email-signature-generator.git"
+  },
+  "author": "Jason Cross <hellojason.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hello-jason/wpe-email-signature-generator/issues"
+  }
+}
