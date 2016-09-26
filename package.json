@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "jump-start": "^0.0.7",
+    "jump-start": "^0.0.9",
     "gulp": "^3.9.1",
     "gulp-csso": "^2.0.0",
     "gulp-gzip": "^1.4.0",
