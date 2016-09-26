@@ -26,21 +26,36 @@ URL: http://wpeng.in/signature
 ```bash
 npm install
 ```
+
+* View in browser - [http://localhost:8001/dist](http://localhost:8001/dist)
+
+```bash
+gulp connect
+```
+
+---
+
+## Deploying
+
 * Build project
 
 ```bash
 gulp build
 ```
 
-* View in browser - http://localhost:8001/dist
+* Add files to repo
 
 ```bash
-gulp connect
+git add file1 file2
 ```
 
-### Gulp tasks
+* Commit and push
 
-*watch* - Runs a server at http://localhost:8001/dist. Watches for changes in src/scss/*.scss then runs build task. Useful while developing.
+---
+
+## Gulp tasks
+
+*watch* - Runs a server at [http://localhost:8001/dist](http://localhost:8001/dist). Watches for changes in src/scss/*.scss then runs build task. Useful while developing.
 
 ```bash
 gulp watch
