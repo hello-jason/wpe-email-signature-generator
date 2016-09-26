@@ -61,7 +61,7 @@ git add file1 file2
 gulp watch
 ```
 
-*build* - Compiles SCSS, moves html/images into `dist` folder
+*build* - Master build task. Compiles SCSS, moves html/images into `dist` folder, runs autoprefixer, minifies, etc.
 
 ```bash
 gulp build
