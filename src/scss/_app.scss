@@ -1,0 +1,229 @@
+* {
+  font-style: normal;
+}
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.well {
+  background: none;
+  border: 1px solid #DDDDDD;
+  margin-bottom: 20px;
+}
+#plaintext-signature {
+  font-size: 12px;
+}
+.help-block {
+  font-size: 12px;
+}
+.form-group {
+  margin-bottom: 22px;
+}
+.alert ol, .alert ul {
+  margin-bottom: 0;
+}
+.tab-pane {
+  padding: 20px;
+  border: 1px solid #DDDDDD;
+  border-top: 0 none;
+}
+a:focus {
+  outline: none !important;
+}
+.required {
+  color: $brand-danger;
+}
+hr {
+  border-top-color: $color-bluescale-4;
+  margin-top: $padding-md;
+  margin-bottom: $padding-md;
+}
+
+.btn {
+  padding: $padding-xs;
+  text-transform: none;
+  font-size: $font-size-small;
+  margin: 0;
+  border: 1px solid $table-border-color;
+  font-family: $font-family-base;
+  box-shadow: none;
+  &.active {
+    box-shadow: none;
+  }
+  &:hover, &:active, &.active {
+    color: $text-color;
+    background: #dfdfdf;
+  }
+}
+
+#instructions {
+  background: #f5f5f5;
+  padding: 15px;
+  border: 1px solid #31708f;
+  img {
+    border: 1px solid #dfdfdf;
+  }
+  li {
+  margin-bottom: 1em;
+  }
+}
+
+.hero {
+  background: url(../images/WP-EMAIL-HeroBackground-v01.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  min-height: 565px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  .logo {
+    position: absolute;
+    right: $padding-lg;
+    top: 0;
+    padding: $padding-md $padding-sm $padding-sm;
+    background: $brand-default;
+    z-index: 3;
+  }
+  .textbox {
+    border: 3px solid #fff;
+    color: #fff;
+    @extend .col-xs-9;
+    @extend .col-md-7;
+    margin: $padding-md;
+    @media (min-width: $screen-md-min) {
+      margin: 0;
+    }
+    .box {
+      padding: $padding-sm;
+    }
+    .icon {
+      @extend .col-md-2;
+      @media (min-width: $screen-lg-min) {
+        border-right: 3px solid #fff;
+      }
+    }
+    .title {
+      @extend .col-md-10;
+      padding: $padding-md - 3px;
+      h1 {
+        padding: 0;
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+      }
+    }
+    .content {
+      border-top: 3px solid #fff;
+      padding: $padding-md;
+      position: relative;
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 56px;
+        line-height: 1.25em;
+        font-family: $headings-font-family;
+        font-weight: bold;
+      }
+      .fa {
+        font-size: 60px;
+        animation: rainbow 3s infinite;
+        margin-top: $padding-md;
+        @media (min-width: $screen-md-min) {
+          margin: 0;
+          position: absolute;
+          left: $padding-sm;
+          bottom: $padding-sm;
+          transform: rotate(45deg);
+        }
+      }
+      em {
+        border-bottom: 2px solid #fff;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+main {
+  background: $color-bluescale-1;
+  clear: both;
+  position: relative;
+  z-index: 2;
+  &>div {
+    margin-left: -$padding-sm;
+  }
+}
+
+#signature-output {
+  background: $color-bluescale-2;
+  padding: $padding-lg;
+  margin-top: $padding-lg;
+  .tab-pane, .well {
+    background: #fff;
+  }
+  // Don't show underline transition on active tab
+  .nav-tabs {
+    li.active {
+      &>a:link {
+        &, &:active, &:focus, &:hover {
+          &::before {
+            transition: none;
+            background: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  .option {
+    color: $color-pelorous;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-size-small;
+    margin: 0;
+    padding: 0;
+  }
+  .signature-title {
+    margin: 0 0 $padding-sm;
+    padding: 0;
+  }
+}
+
+.step {
+  background: #fff;
+  margin-bottom: $padding-lg;
+  .titlebar {
+    background: $brand-default;
+    color: #fff;
+    position: relative;
+    padding: $padding-md;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    .step-number {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: $padding-sm $padding-md;
+      background: $color-pelorous;
+      font-size: 60px;
+    }
+  }
+  .content {
+    padding: $padding-lg;
+    p {
+      margin-bottom: $padding-md;
+    }
+  }
+}
+
+// Color spectrum animation
+@keyframes rainbow {
+  0% {color: $color-celery;}
+  30% {color: $color-saffron;}
+  50% {color: $color-montecarlo;}
+  70% {color: $color-pelorous;}
+  100% {color: $color-celery;}
+}
