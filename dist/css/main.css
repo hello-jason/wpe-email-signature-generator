@@ -8410,15 +8410,16 @@ main {
   main > div {
     margin-left: -15px; }
 
+.nav-tabs li.active > a:link::before, .nav-tabs li.active > a:link:active::before, .nav-tabs li.active > a:link:focus::before, .nav-tabs li.active > a:link:hover::before {
+  transition: none;
+  background: #fff !important; }
+
 #signature-output {
   background: #E2E8ED;
   padding: 60px;
   margin-top: 60px; }
   #signature-output .tab-pane, #signature-output .well {
     background: #fff; }
-  #signature-output .nav-tabs li.active > a:link::before, #signature-output .nav-tabs li.active > a:link:active::before, #signature-output .nav-tabs li.active > a:link:focus::before, #signature-output .nav-tabs li.active > a:link:hover::before {
-    transition: none;
-    background: #fff !important; }
   #signature-output .option {
     color: #40BAC8;
     text-transform: uppercase;
