@@ -229,7 +229,7 @@ $(".input_position input").on("change keyup paste", function(){
 // Email address
 // Check input field for data
 $(".input_email_address input").on("change keyup paste", function(){
-  var email_address = $(this).val();
+  var email_address = $(this).val().toLowerCase();
   if(email_address) {
     $("span.output_email_address").html(email_address);
     $(".email_address_anchor").attr("href", "mailto:"+email_address);
