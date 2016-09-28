@@ -97,13 +97,15 @@ var address_full = {
   austin: "504 Lavaca Street, Suite 1000<br>Austin, Texas 78701",
   san_antonio: "110 E Houston St, Suite 202<br>San Antonio, Texas 78205",
   san_francisco: "San Francisco, California",
-  london: "Second Home<br>68-80 Hanbury Street<br>London, E1 5JL, United Kingdom"
+  london: "Second Home<br>68-80 Hanbury Street<br>London, E1 5JL, United Kingdom",
+  limerick: "7/8 Patrick Street,<br>Limerick, Ireland"
 }
 var address_horizontal = {
   austin: "504 Lavaca Street, Suite 1000 Austin, Texas 78701",
   san_antonio: "110 E Houston St, Suite 202 San Antonio, Texas 78205",
   san_francisco: "San Francisco, California",
-  london: "Second Home 68-80 Hanbury Street London, E1 5JL, United Kingdom"
+  london: "Second Home 68-80 Hanbury Street London, E1 5JL, United Kingdom",
+  limerick: "7/8 Patrick Street, Limerick, Ireland"
 }
 
 ////////////////////////
@@ -128,6 +130,9 @@ function output_address_full() {
     if(document.getElementById('location_london').checked) {
       address_line_full = address_full.london;
     }
+    if(document.getElementById('location_limerick').checked) {
+      address_line_full = address_full.limerick;
+    }
     $("span.output_address_full").html(address_line_full);
     updateHtmlSigRaw()
   });
@@ -151,6 +156,9 @@ function output_address_horizontal() {
     }
     if(document.getElementById('location_london').checked) {
       address_line_horizontal = address_horizontal.london;
+    }
+    if(document.getElementById('location_limerick').checked) {
+      address_line_horizontal = address_horizontal.limerick;
     }
     $("span.output_address_horizontal").html(address_line_horizontal);
     updateHtmlSigRaw()
