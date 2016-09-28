@@ -156,25 +156,26 @@ main {
   }
 }
 
+// Don't show underline transition on active tab
+.nav-tabs {
+  li.active {
+    &>a:link {
+      &, &:active, &:focus, &:hover {
+        &::before {
+          transition: none;
+          background: #fff !important;
+        }
+      }
+    }
+  }
+}
+
 #signature-output {
   background: $color-bluescale-2;
   padding: $padding-lg;
   margin-top: $padding-lg;
   .tab-pane, .well {
     background: #fff;
-  }
-  // Don't show underline transition on active tab
-  .nav-tabs {
-    li.active {
-      &>a:link {
-        &, &:active, &:focus, &:hover {
-          &::before {
-            transition: none;
-            background: #fff !important;
-          }
-        }
-      }
-    }
   }
   .option {
     color: $color-pelorous;
