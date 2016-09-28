@@ -3,6 +3,7 @@
 // Setup variables
 var gulp         = require('gulp'); // core gulp
 var sass         = require('gulp-sass'); // Compile scss files
+var htmlmin      = require('gulp-htmlmin'); // minify html
 var csso         = require('gulp-csso'); // minify css
 var gzip         = require('gulp-gzip'); // gzip compression
 var connect      = require('gulp-connect'); // web server
@@ -32,14 +33,6 @@ gulp.task( 'clean:dist', function() {
 });
 
 //
-// Copy index.html
-//
-gulp.task('copy-html', function() {
-  gulp.src('./src/index.html')
-    .pipe(gulp.dest('./dist'));
-});
-
-//
 // Copy javascript
 //
 gulp.task('copy-js', function() {
@@ -53,6 +46,15 @@ gulp.task('copy-js', function() {
 gulp.task('copy-images', function() {
   gulp.src('./src/images/**/*.*')
     .pipe(gulp.dest('./dist/images'));
+});
+
+//
+// Minify html
+//
+gulp.task('minify-html', function() {
+  return gulp.src('./src/index.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./dist'));
 });
 
 //
@@ -76,7 +78,7 @@ gulp.task('autoprefixer', function() {
 });
 
 // Minify compiled CSS
-gulp.task('minify', function() {
+gulp.task('minify-css', function() {
   return gulp.src('./dist/css/**/*.css')
     .pipe(csso())
     .pipe(gulp.dest('./dist/css'))
@@ -99,7 +101,7 @@ gulp.task('copyfonts', function() {
 // Master build task
 // Compilies stylesheets for production
 gulp.task('build', function() {
-  runSequence('clean:dist', 'copy-html', 'copy-images', 'copy-js', 'sass','autoprefixer', 'minify', 'gzip', 'copyfonts');
+  runSequence('clean:dist', 'minify-html', 'copy-images', 'copy-js', 'sass','autoprefixer', 'minify-css', 'gzip', 'copyfonts');
 });
 
 //

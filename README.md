@@ -43,13 +43,19 @@ gulp connect
 gulp build
 ```
 
-* Add files to repo
+* Add files to repo, commit, and push
 
-```bash
-git add file1 file2
-```
-
-* Commit and push
+* Update wpeng.in/signature URL shortener
+  1. In GitHub, go to the Code tab, then click Commits
+  1. For the most recent commit, click the code button at the far right titled "Browse the repository at this point in the history"
+  1. Navigate to `dist/index.html`, then click the "Raw" button from the toolbar
+  1. Copy this URL
+  1. Visit https://rawgit.com/, and paste in the URL into the uppermost field
+  1. Copy the `Production` URL that is generated
+  1. Log into wpeng.in WP site
+  1. Edit Link named `Email Signature Generator`
+  1. Change `Destination URL` to new url on your clipboard
+  1. Save changes
 
 ---
 

@@ -5,15 +5,16 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "jump-start": "^0.0.9",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect": "^5.0.0",
     "gulp-csso": "^2.0.0",
     "gulp-gzip": "^1.4.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-connect": "^5.0.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-watch": "^4.3.9",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-rm": "^1.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.9",
+    "jump-start": "^0.0.9",
     "run-sequence ": "^1.2.2"
   },
   "scripts": {
