@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>WP Engine Email Signature</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
 
@@ -54,7 +55,7 @@
           <div class="col-md-6">
             <div class="input_email_address form-group">
               <label>Email address<span class="required">*</span></label>
-              <input class="form-control" type="text" name="email_address" placeholder="louis.armstrong@wpengine.com">
+              <input class="form-control" type="email" name="email_address" placeholder="louis.armstrong@wpengine.com">
             </div>
           </div>
           <div class="col-md-6">
@@ -140,7 +141,7 @@
     <div class="step">
       <div class="titlebar">
         <span class="step-number">2</span>
-        <p>Copy the signature you want to use</p>
+        <p>Copy the signature you want to use.</p>
       </div> <!-- /titlebar -->
       <div class="content">
         <p>Pick one of the signatures on the right, then copy it to your clipboard.</p>
@@ -154,10 +155,20 @@
         <p>Paste the signature into your email program</p>
       </div> <!-- /titlebar -->
       <div class="content">
-        <p>Choose a program below </p>
-        <button id="paste-gmail" type="button" class="btn btn-xs">Gmail</button>
-        <button id="paste-outlook" type="button" class="btn btn-xs">Outlook</button>
-        <img class="img-responsive" src="images/WP-GIF-PasteGmail-v01.gif">
+        <p>Choose a program below to see where to paste the signature.</p>
+        <ul id="html-signature-full-tabs" class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a role="tab" href="#gif-gmail">Gmail</a></li>
+          <li role="presentation"><a role="tab" href="#gif-outlook">Outlook</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="gif-gmail" class="tab-pane active" role="tabpanel">
+            <img class="img-responsive" src="images/WP-GIF-PasteGmail-v01.gif">
+          </div> <!-- /gif-gmail -->
+          <div id="gif-outlook" class="tab-pane" role="tabpanel">
+            <p>From the New message window, click Signature > Signatures&hellip;</p>
+            <img class="img-responsive" src="images/WP-GIF-PasteOutlook-v01.gif">
+          </div> <!-- /gif-outlook -->
+        </div> <!-- /tab-content -->
       </div>
     </div> <!-- /step-2 -->
   </div> <!-- /col-md-6 -->
